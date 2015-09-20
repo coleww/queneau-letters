@@ -41,19 +41,21 @@ module.exports = function () {
 function chopByVowelConsonant (word) {
   var res = []
   var letters = word.split('')
-  var curr = letters.shift()
-  var vowel = !!curr.match(/[aeiou]/i)
-  letters.forEach(function (l) {
-    if (vowel === !!l.match(/[aeiou]/i)) {
-      curr += l
-    } else {
-      res.push(curr)
-      curr = l
-      vowel = !!curr.match(/[aeiou]/i)
-    }
-  })
-  if (curr) res.push(curr)
-  return res
+  if (letters.length) {
+    var curr = letters.shift()
+    var vowel = !!curr.match(/[aeiou]/i)
+    letters.forEach(function (l) {
+      if (vowel === !!l.match(/[aeiou]/i)) {
+        curr += l
+      } else {
+        res.push(curr)
+        curr = l
+        vowel = !!curr.match(/[aeiou]/i)
+      }
+    })
+    if (curr) res.push(curr)
+    return res
+  }
 }
 
 module.exports.chopByVowelConsonant = chopByVowelConsonant
