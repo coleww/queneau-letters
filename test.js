@@ -13,5 +13,5 @@ tap.test('does the thing', function (t) {
   t.plan(1)
   var q = makeQueneauLetters()
   q.seed(['craa', 'aarc'])
-  t.equal(q.fill(2), 'a'.match(/craa|aarc|rcaa/), 'does it')
+  t.ok(q.fill(2).match(/craa|aarc|rcaa/), 'does it')
 })
