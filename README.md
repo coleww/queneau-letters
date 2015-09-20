@@ -22,4 +22,19 @@ This means that single-word BGD titles are almost never English words, but they 
 
 ### EXAMPLE
 
+```
+  var makeQueneau = require('quenea-letters')
+  var queneauLetters = makeQueneau()
+  var lines = fs.readFileSync('./lines.txt').toString().split('\n')
+  queneauLetters.seed(lines)
+  queneauLetters.generate(5)
+  => wowwwowowowowowowowowowo // idk this will vary i guess
+```
+
 ### API
+
+`seed(lines)`
+=> slices up the lines into words into consonant/vowel runs and puts them in the appropriate bucket
+
+`generate(length)`
+=> randomly alternates between vowels and consonants until it has `length` number of consonant/vowel runs. note that length here does not mean string.length, i.e, `['w', 'o', 'rld']` would be valid for length 3.   

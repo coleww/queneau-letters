@@ -11,6 +11,23 @@
     "standard": "4.5.4"
   },
   "license": "MIT",
-  "description": "queneau-letters ----------------",
-  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)"
+  "description": "node.js implementation of Queneau Assembly/Letter Chunks algorithm by Leonard Richardson",
+  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
+  "dependencies": {
+    "standard": "^4.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coleww/queneau-letters.git"
+  },
+  "keywords": [
+    "poetry",
+    "queneau",
+    "word",
+    "assembly"
+  ],
+  "bugs": {
+    "url": "https://github.com/coleww/queneau-letters/issues"
+  },
+  "homepage": "https://github.com/coleww/queneau-letters#readme"
 }
