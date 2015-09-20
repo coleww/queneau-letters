@@ -8,12 +8,14 @@ module.exports = function () {
       ls.forEach(function (l) {
         l.split(' ').forEach(function (w) {
           var chopped = chopByVowelConsonant(w)
-          that.cons = that.cons.concat(chopped.filter(function (l) {
-            return !l.match(/[aeiou]/i)
-          }))
-          that.vows = that.vows.concat(chopped.filter(function (l) {
-            return !!l.match(/[aeiou]/i)
-          }))
+          if (chopped) {
+            that.cons = that.cons.concat(chopped.filter(function (l) {
+              return !l.match(/[aeiou]/i)
+            }))
+            that.vows = that.vows.concat(chopped.filter(function (l) {
+              return !!l.match(/[aeiou]/i)
+            }))
+          }
         })
       })
       return this
