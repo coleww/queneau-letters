@@ -1,6 +1,6 @@
 {
   "name": "queneau-letters",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
     "test": "standard && node test.js",
@@ -14,6 +14,7 @@
   "description": "node.js implementation of Queneau Assembly/Letter Chunks algorithm by Leonard Richardson",
   "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
   "dependencies": {
+    "pick-random": "^1.1.0",
     "standard": "^4.5.4"
   },
   "repository": {
